@@ -76,7 +76,7 @@ MODULE 4 : DISEASE PREDICTION MODULE
 
 ## 👩‍💻 Authors
 
-Ranhita B
+Ranhita B  
 Monisha V B  
 Keerthana S  
 
