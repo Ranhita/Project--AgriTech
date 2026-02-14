@@ -47,3 +47,6 @@ Current Version: **Frontend prototype (backend integration in progress)**
 4. Microclimate Sensor Visualization  
   
 ---
+## Screenshots
+
+<img width="1600" height="804" alt="image" src="https://github.com/user-attachments/assets/21226e74-c100-4a1e-a290-5359f85fab40" />
