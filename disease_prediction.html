@@ -1,0 +1,22 @@
+<div class="disease-form">
+  <h3>Disease Prediction</h3>
+  <form enctype="multipart/form-data" id="diseaseForm">
+    <label for="leafImage">Upload Leaf Image:</label>
+    <input type="file" id="leafImage" accept="image/*" required>
+    <br><br>
+    <button type="submit">Predict</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('diseaseForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const fileInput = document.getElementById('leafImage');
+    if(fileInput.files.length > 0){
+      alert("File " + fileInput.files[0].name + " ready for prediction!");
+      // Add AI prediction logic here
+    } else {
+      alert("Please upload a leaf image.");
+    }
+  });
+</script>
