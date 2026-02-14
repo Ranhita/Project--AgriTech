@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Farming Advisory - AgriTech</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  body { display:flex; font-family:Arial,sans-serif; margin:0; background:#f4f6f8; }
+  .sidebar { width:220px; background:#fff; padding:20px 0; }
+  .sidebar .logo { text-align:center; font-weight:bold; color:#2e7d32; margin-bottom:20px; }
+  .sidebar nav a { display:block; padding:12px 20px; color:#333; text-decoration:none; margin:4px 10px; border-radius:6px; }
+  .sidebar nav a.active { background:#2e7d32; color:#fff; }
+  .main-content { flex:1; padding:40px; }
+  .card { background:#fff; padding:30px; border-radius:12px; margin:auto; max-width:600px; }
+  input, textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; }
+  input[readonly] { background:#f0f0f0; }
+  button { background:#2e7d32; color:#fff; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">AgriTech 🌱</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="ai_advisory.html" class="active">AI Advisory</a>
+    <a href="lora_sensors.html">LoRa Sensors</a>
+    <a href="disease_detection.html">Disease Detection</a>
+  </nav>
+</div>
+
+<div class="main-content">
+  <h2>Farming Advisory</h2>
+  <div class="card">
+    <form>
+      <input type="text" value="Powdery Mildew" readonly>
+      <input type="text" value="82%" readonly>
+      <textarea>
+High humidity detected. Improve aeration. 
+Suspected powdery mildew — ensure spacing, apply treatment if needed.
+      </textarea>
+      <button type="submit"><i class="fas fa-check-circle"></i> Acknowledge</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
