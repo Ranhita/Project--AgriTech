@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LoRa Sensor Data - AgriTech</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  body { display:flex; font-family:Arial,sans-serif; margin:0; background:#f4f6f8; }
+  .sidebar { width:220px; background:#fff; padding:20px 0; }
+  .sidebar .logo { text-align:center; font-weight:bold; color:#2e7d32; margin-bottom:20px; }
+  .sidebar nav a { display:block; padding:12px 20px; color:#333; text-decoration:none; margin:4px 10px; border-radius:6px; }
+  .sidebar nav a.active { background:#2e7d32; color:#fff; }
+  .main-content { flex:1; padding:40px; }
+  .card { background:#fff; padding:30px; border-radius:12px; max-width:600px; margin:auto; }
+  input, select { width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; }
+  button { background:#2e7d32; color:#fff; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">AgriTech 🌱</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="ai_advisory.html">AI Advisory</a>
+    <a href="lora_sensors.html" class="active">LoRa Sensors</a>
+    <a href="disease_detection.html">Disease Detection</a>
+  </nav>
+</div>
+
+<div class="main-content">
+  <h2>LoRa Sensor Data Entry</h2>
+  <div class="card">
+    <form>
+      <input type="text" value="node-A" placeholder="Node ID">
+      <input type="number" value="28" placeholder="Temperature (°C)">
+      <input type="number" value="65" placeholder="Humidity (%)">
+      <input type="number" value="45" placeholder="Soil Moisture (%)">
+      <select>
+        <option>0 (Dry)</option>
+        <option>1 (Wet)</option>
+      </select>
+      <input type="number" value="1200" placeholder="Light (lux)">
+      <button type="submit"><i class="fas fa-save"></i> Save Data</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
