@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AgriTech Farm Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body { display:flex; font-family:Arial,sans-serif; margin:0; background:#f4f6f8; }
+  .sidebar { width:220px; background:#fff; border-right:1px solid #ddd; padding:20px 0; }
+  .sidebar .logo { text-align:center; font-weight:bold; color:#2e7d32; margin-bottom:20px; }
+  .sidebar nav a { display:block; padding:12px 20px; color:#333; text-decoration:none; margin:4px 10px; border-radius:6px; }
+  .sidebar nav a.active { background:#2e7d32; color:#fff; }
+  .main-content { flex:1; padding:30px; }
+  .card { background:#fff; border-radius:12px; padding:20px; margin-bottom:20px; }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">AgriTech 🌱</div>
+  <nav>
+    <a href="#" class="active"><i class="fas fa-chart-line"></i> Dashboard</a>
+    <a href="#"><i class="fas fa-robot"></i> AI Advisory</a>
+    <a href="#"><i class="fas fa-wifi"></i> LoRa Sensors</a>
+    <a href="#"><i class="fas fa-leaf"></i> Disease Detection</a>
+  </nav>
+</div>
+
+<div class="main-content">
+  <h2>Farm Dashboard</h2>
+  <div class="card">
+    <h3>Environmental Conditions</h3>
+    <canvas id="envChart"></canvas>
+  </div>
+</div>
+
+<script>
+const ctx = document.getElementById('envChart').getContext('2d');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+    datasets: [
+      { label: 'Temperature (°C)', data: [24,25,23,24,25,26,24.8], borderColor:'#f39c12', fill:true, backgroundColor:'rgba(243,156,18,0.1)' },
+      { label: 'Soil Moisture (%)', data: [60,62,61,63,65,66,66], borderColor:'#2e7d32', fill:true, backgroundColor:'rgba(46,125,50,0.1)' }
+    ]
+  }
+});
+</script>
+
+</body>
+</html>
